@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket</title>
+    <style>
+        .bb {
+            border: 2px solid black;
+            height: 250px;
+            text-align: center;
+            background-color: rgb(199, 192, 192);
+            border-radius: 20px;
+
+
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="fsec">
+
+
+        <div class="bb">
+            <h1>Details</h1>
+            <lable>Name:</lable>
+            <input type="text" placeholder="Enter Name" name="" id=""><br>
+            <lable>Seat no.</lable>
+            <input type="number" placeholder="Enter Seat No." name="" id=""><br>
+            <lable>Price</lable>
+            <input type="number" placeholder="Enter Price" name="" id=""><br>
+            <lable>Select movie</lable>
+            <select>
+                <option>None</option>
+                <option>Animal</option>
+                <option>Pushpa</option>
+                <option>Tiger 3</option>
+            </select><br>
+            <label>Date</label>
+            <input type="date"><br><br>
+            <button onclick="show()">Submit</button>
+
+        </div>
+        <!-- <div></div> -->
+
+
+    </section>
+
+    <script>
+        function show() {
+
+
+            var name = document.getElementsByTagName('input')[0].value
+            var seatNo = document.getElementsByTagName('input')[1].value
+            var price = document.getElementsByTagName('input')[2].value
+            var sMovie = document.getElementsByTagName('select')[0].value
+            var date = document.getElementsByTagName('input')[3].value
+
+            var bd = document.getElementsByTagName('body')[0]
+            var sec = document.createElement('section')
+            bd.appendChild(sec)
+            var c = document.getElementsByTagName('section')[1]
+            c.className = 'addCSS';
+
+            document.getElementsByClassName('addCSS')[0].setAttribute('style', 'border: 2px solid red;  height:auto;')
+            // document.getElementsByClassName('addCSS')[0].setAttribute('style','display:flex;')
+
+            //document.getElementsByTagName('section')[1].setAttribute('style','display:flex;')
+
+            var div1 = document.createElement('div')
+            sec.appendChild(div1)
+            document.getElementsByTagName('div')[1].setAttribute('style', ' margin-top: 30px; background : rgb(28, 28, 72); display:flex ')
+
+            var div2 = document.createElement('div')
+            div1.appendChild(div2)
+            var No = document.createElement('h3')
+            var ticNo = document.createTextNode('No.000000')
+            No.appendChild(ticNo)
+            div2.appendChild(No)
+            div1.appendChild(div2)
+            document.getElementsByTagName('h3')[0].setAttribute('style', ' color:white;    ')
+            document.getElementsByTagName('div')[2].setAttribute('style', ' width:400px; margin-left:50px; text-align:center;')
+
+
+
+            var div3 = document.createElement('div')
+            div1.appendChild(div3)
+            var tic = document.createElement('h3')
+            var ticMov = document.createTextNode('MOVIE TICKET')
+            tic.appendChild(ticMov)
+            div3.appendChild(tic)
+            div1.appendChild(div3)
+            document.getElementsByTagName('h3')[0].setAttribute('style', 'color:white;')
+            document.getElementsByTagName('div')[3].setAttribute('style', ' width:100% ; text-align:right; color:white; margin-right:20px')
+
+
+            var div4 = document.createElement('div')
+            sec.appendChild(div4)
+            document.getElementsByTagName('div')[4].setAttribute('style', 'border:2px solid black; display:flex; height:260px')
+
+            var div5 = document.createElement('div')
+            div4.appendChild(div5)
+            var thea = document.createElement('h3')
+            var theNo = document.createTextNode('THEATER:1')
+            thea.appendChild(theNo)
+
+            div5.appendChild(thea)
+            div4.appendChild(div5)
+            document.getElementsByTagName('h3')[2].setAttribute('style', ' color:rgb(28, 28, 72)   ')
+            document.getElementsByTagName('div')[5].setAttribute('style', '  width:400px;  margin-left:49px; text-align:center; border-right:3px dashed rgb(28, 28, 72)')
+
+
+            var ss = document.createElement('h1')
+            var nName = document.createTextNode('SEAT:')
+            var stNo = document.createElement('h1')
+            var satNo = document.createTextNode(seatNo)
+            ss.appendChild(nName)
+            div5.appendChild(ss)
+            stNo.appendChild(satNo)
+            div5.appendChild(stNo)
+            div4.appendChild(div5)
+            document.getElementsByTagName('h1')[1].setAttribute('style', 'color:rgb(28, 28, 72) ; ')
+            document.getElementsByTagName('h1')[2].setAttribute('style', 'color:rgb(28, 28, 72)')
+
+            var div6 = document.createElement('div')
+            div4.appendChild(div6)
+            var MoNa = document.createElement('h1')
+            var MName = document.createTextNode(sMovie)
+
+
+            MoNa.appendChild(MName)
+            div6.appendChild(MoNa)
+            div4.appendChild(div6)
+            document.getElementsByTagName('h1')[2].setAttribute('style', 'color:rgb(28, 28, 72) ; font-size: xxx-large;')
+            document.getElementsByTagName('div')[6].setAttribute('style', '   width:100%; text-align:left;  padding-left:80px ')
+
+
+            var No = document.createElement('h4')
+            var ticNo = document.createTextNode('No.0000000')
+            No.appendChild(ticNo)
+            div6.appendChild(No)
+            div4.appendChild(div6)
+            document.getElementsByTagName('h4')[0].setAttribute('style', 'color:rgb(28, 28, 72)')
+
+
+            var sNo = document.createElement('h1')
+            var sName = document.createTextNode('SEAT:')
+            var setNo = document.createElement('h1')
+            var seatNo = document.createTextNode(seatNo)
+            sNo.appendChild(sName)
+            div6.appendChild(sNo)
+            setNo.appendChild(seatNo)
+            div6.appendChild(setNo)
+            div4.appendChild(div6)
+            document.getElementsByTagName('h1')[3].setAttribute('style', 'color:rgb(28, 28, 72) ; ')
+            document.getElementsByTagName('h1')[4].setAttribute('style', 'color:rgb(28, 28, 72)')
+            // document.getElementsByTagName('div')[6].setAttribute('style','   width:100%; text-align:left; border: 2px solid black ; padding-left:80px ')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // var tag = document.createElement('div')
+            // sec.appendChild(tag)
+            // document.getElementsByTagName('div')[2].setAttribute('style', 'border : 2px solid green; ')
+
+            // var tag = document.createElement('div')
+            // sec.appendChild(tag)
+            // document.getElementsByTagName('div')[3].setAttribute('style', 'border : 2px solid yellow;')
+
+
+
+
+
+            // var div = document.getElementsByTagName('div')[1]
+            // var crtTag1 = document.createElement('h2')
+            // var crtTxt1 = document.createTextNode(name)
+            // crtTag1.appendChild(crtTxt1)
+            // div.appendChild(crtTag1)
+
+            // var div = document.getElementsByTagName('div')[1]
+            // var crtTag2 = document.createElement('h2')
+            // var crtTxt2 = document.createTextNode(seatNo)
+            // crtTag2.appendChild(crtTxt2)
+            // div.appendChild(crtTag2)
+
+            // var div = document.getElementsByTagName('div')[1]
+            // crtTag3 = document.createElement('h2')
+            // crtTxt3 = document.createTextNode(price)
+            // crtTag3.appendChild(crtTxt3)
+            // div.appendChild(crtTag3)
+
+
+            // var div = document.getElementsByTagName('div')[1]
+            // crtTag4 = document.createElement('h2')
+            // crtTxt4 = document.createTextNode(sMovie)
+            // crtTag4.appendChild(crtTxt4)
+            // div.appendChild(crtTag4)
+
+            // var div = document.getElementsByTagName('div')[1]
+            // crtTag5 = document.createElement('h2')
+            // crtTxt5 = document.createTextNode(date)
+            // crtTag5.appendChild(crtTxt5)
+            // div.appendChild(crtTag5)
+
+
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
